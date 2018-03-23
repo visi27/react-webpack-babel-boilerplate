@@ -37,6 +37,7 @@ class App extends Component {
         <Counter counter={counter}/>
 
         <button
+          className='increment'
           type="button"
           onClick={this.onIncrement}
         >
@@ -44,6 +45,7 @@ class App extends Component {
         </button>
 
         <button
+          className='decrement'
           type="button"
           onClick={this.onDecrement}
         >
