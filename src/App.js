@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export const doIncrement = (prevState) => ({
-  counter: prevState.counter + 1
+  counter: prevState.counter + 1,
 });
 
 export const doDecrement = (prevState) => ({
-  counter: prevState.counter - 1
+  counter: prevState.counter - 1,
 });
 
 class App extends Component {
-  constructor() {
+  constructor () {
     super();
 
     this.state = {
@@ -20,16 +21,16 @@ class App extends Component {
     this.onDecrement = this.onDecrement.bind(this);
   }
 
-  onIncrement() {
+  onIncrement () {
     this.setState(doIncrement);
   }
 
-  onDecrement() {
+  onDecrement () {
     this.setState(doDecrement);
   }
 
-  render() {
-    const { counter } = this.state;
+  render () {
+    const {counter} = this.state;
 
     return (
       <div>
@@ -53,6 +54,18 @@ class App extends Component {
         </button>
       </div>
     );
+  }
+
+  componentDidMount () {
+    const {counter} = this.state;
+    axios.get('https://reqres.in/api/unknown')
+         .then(res => {
+             if (counter === 0) {
+               this.setState({counter: res.data.total});
+             }
+           },
+         )
+         .catch(error => console.log(error));
   }
 }
 
