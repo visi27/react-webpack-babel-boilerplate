@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --config ./webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "test:unit": "mocha --require babel-core/register --require ignore-styles --require ./test/helpers.js --require ./test/dom.js 'src/**/*.spec.js'",
     "test:unit:watch": "npm run test:unit -- --watch"
   },
