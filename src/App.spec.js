@@ -71,14 +71,14 @@ describe('App Component', () => {
     expect(App.prototype.componentDidMount.calledOnce).to.equal(true);
   });
 
-  // it('fetches async counters', () => {
-  //   const wrapper = mount(<App/>);
-  //
-  //   expect(wrapper.state().counter).to.equal(0);
-  //   promise.then((res) => {
-  //     console.log(res);
-  //     expect(wrapper.state().counter).to.equal(res.data.total);
-  //   })
-  //          .catch(error => console.log(error));
-  // });
+  it('fetches async counters', () => {
+    const wrapper = mount(<App/>);
+
+    expect(wrapper.state().counter).to.equal(0);
+    promise.then((res) => {
+      console.log(res);
+      expect(wrapper.state().counter).to.equal(res.data.total);
+    })
+           .catch(error => console.log(error));
+  });
 });

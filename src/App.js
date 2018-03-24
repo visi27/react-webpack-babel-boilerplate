@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import * as axios from 'axios';
 
 export const doIncrement = (prevState) => ({
   counter: prevState.counter + 1,
