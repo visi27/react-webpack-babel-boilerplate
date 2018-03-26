@@ -1,3 +1,4 @@
 {
-  "projectId": "rd2box"
+  "projectId": "rd2box",
+  "baseUrl": "http://localhost:8080"
 }
