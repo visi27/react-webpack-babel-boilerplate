@@ -11,7 +11,7 @@
     "test:snapshot": "jest --config ./test/jest.config.json",
     "test:snapshot:watch": "npm run test:snapshot -- --watch",
     "test:cypress": "cypress open",
-    "test:cypress:run": "cypress run"
+    "test:cypress:run": "cypress run --record --key 8a68f41b-3b03-448d-9f74-759292e187e3"
   },
   "keywords": [],
   "author": "",
