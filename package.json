@@ -10,7 +10,7 @@
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:snapshot": "jest --config ./test/jest.config.json",
     "test:snapshot:watch": "npm run test:snapshot -- --watch",
-    "test:cypress:start": "cypress open",
+    "test:cypress:open": "cypress open",
     "test:cypress": "start-server-and-test start http://localhost:8080 cypress",
     "cypress": "cypress run --record --key 8a68f41b-3b03-448d-9f74-759292e187e3"
   },
